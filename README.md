@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Pokedex in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the react mentors I’ve been preparing, feel free to steal what you want and leave your doubts
 
 ## Available Scripts
 

@@ -1,0 +1,32 @@
+.loading-group {
+  background-color: saddlebrown;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.loading-gif {
+  width: 195px;
+}
+
+.pokemon-card {
+  min-width: 200px;
+  padding: 15px;
+  border-radius: 10px;
+  border: solid 1px #0a285f;
+  margin: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-align: center;
+}
+
+.card-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-container {
+  display: flex;
+  flex-wrap: wrap;
+}

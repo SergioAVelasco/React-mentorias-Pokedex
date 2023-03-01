@@ -1,0 +1,50 @@
+.layout {
+  background-color: rgb(190, 190, 190);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.side-bar {
+  background-color: #0a285f;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-container-button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.top-bar {
+  background-color: #0075be;
+  display: flex;
+  height: 65px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 15px;
+  color: white;
+}
+
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
+}
+
+.content-container {
+  padding: 15px;
+  overflow: scroll;
+}

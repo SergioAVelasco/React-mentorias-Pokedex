@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Layout from "../../components/layout";
-import "./styles.css";
 import axios from "axios";
+import React, { useEffect, useState, useContext } from "react";
+
+import Layout from "../../components/layout";
 import PokemonCard from "./../../components/pokemonCard/pokemonCard";
+import { PokemonContext } from "../../context/pokemonContext";
+
+import "./styles.css";
 
 const Dashboard = () => {
+  const pokemonContext = useContext(PokemonContext);
   const [pokemonCollection, setPokemonCollection] = useState({});
 
   const addPokemon = (newPokemon: any) => {
@@ -14,7 +18,7 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
-    for (let i = 0; i < 152; i++) {
+    for (let i = 1; i < 152; i++) {
       axios.get(`https://pokeapi.co/api/v2/pokemon/${i}`).then((results) => {
         addPokemon(results.data);
       });
@@ -29,7 +33,14 @@ const Dashboard = () => {
       <div className="list-container">
         {array.map((cPokemon) => {
           const data = cPokemon[1] as any;
-          return <PokemonCard pokemon={data} key={data.id} showButtons />;
+          return (
+            <PokemonCard
+              onAddTeam={pokemonContext.addToMyTeam}
+              pokemon={data}
+              key={data.id}
+              showButtons={true}
+            />
+          );
         })}
       </div>
     </Layout>

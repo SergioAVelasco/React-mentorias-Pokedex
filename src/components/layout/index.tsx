@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 interface LayoutProps {
   children: JSX.Element | JSX.Element[];
@@ -11,9 +12,15 @@ const Layout = ({ children }: LayoutProps) => {
       <div className="side-bar">
         <div></div>
         <div className="links-container">
-          <button className="links-container-button">Todos</button>
-          <button className="links-container-button">Compara</button>
-          <button className="links-container-button">Mi equipo</button>
+          <Link to={"/"}>
+            <b className="links-container-button">Todos</b>
+          </Link>
+          <Link to={"/comparison"}>
+            <b className="links-container-button">Compara</b>
+          </Link>
+          <Link to={"/myTeam"}>
+            <b className="links-container-button">Mi equipo</b>
+          </Link>
         </div>
         <div></div>
       </div>

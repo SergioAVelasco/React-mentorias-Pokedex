@@ -47,4 +47,5 @@
 .content-container {
   padding: 15px;
   overflow: scroll;
+  flex: 1;
 }

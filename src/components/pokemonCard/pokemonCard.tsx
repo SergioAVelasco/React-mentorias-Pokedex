@@ -3,9 +3,10 @@ import React from "react";
 type PokemonCardProps = {
   pokemon: any;
   showButtons: boolean;
+  onAddTeam?: (pokemon: any) => void;
 };
 
-const PokemonCard = ({ pokemon, showButtons }: PokemonCardProps) => {
+const PokemonCard = ({ pokemon, showButtons, onAddTeam }: PokemonCardProps) => {
   const { sprites } = pokemon;
   return (
     <div className="pokemon-card">
@@ -13,7 +14,13 @@ const PokemonCard = ({ pokemon, showButtons }: PokemonCardProps) => {
       <p>{`${pokemon.id}. ${pokemon.name}`}</p>
       {showButtons && (
         <div className="card-button-container">
-          <button>Add my team</button>
+          <button
+            onClick={() => {
+              onAddTeam && onAddTeam(pokemon);
+            }}
+          >
+            Add to my team
+          </button>
           <button>Compare</button>
         </div>
       )}
